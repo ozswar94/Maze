@@ -7,10 +7,17 @@
 
 int main(void)
 {
+	/* 5 x 6; 1 = mur et 0 = vide */
+	int map [5][6] = {
+		{1, 0, 0, 0, 0, 0},
+		{0, 0, 0, 1, 0, 0},
+		{0, 1, 0, 0, 0, 0},
+		{0, 1, 1, 0, 0, 0},
+		{0, 0, 0, 1, 1, 1}
+	};
 	SDL_Window *window = NULL;
 	SDL_Renderer *ren = NULL;
-	float h_rect = HEIGHT_SCREEN / 5, w_rect = WIDTH_SCREEN / 6;
-	SDL_Rect rect = {0, 0, h_rect, w_rect};
+	SDL_Rect rect = {100, 100, 10, 10};
 	SDL_Event event;
 	int status = EXIT_FAILURE;
 	int status_event = 1;
@@ -52,19 +59,20 @@ int main(void)
 				{
 					case SDLK_w:
 						if (rect.y > 0)
-							rect.y -= h_rect;
+							rect.y -= 5;
 					break;
 					case SDLK_s:
-						if (rect.y + h_rect < HEIGHT_SCREEN)
-						rect.y += h_rect;
+						if (rect.y < HEIGHT_SCREEN - 10)
+						rect.y += 5;
 					break;
 					case SDLK_a:
 						if (rect.x > 0)
-							rect.x -= w_rect;
+							rect.x -= 5;
 					break;
 					case SDLK_d:
-						if (rect.x + w_rect < WIDTH_SCREEN)
-						rect.x += w_rect;
+						if (rect.x < WIDTH_SCREEN - 10)
+						rect.x += 5;
+					break;
 				}
 			}
 			SDL_SetRenderDrawColor(ren, 0, 0, 0, 255);
