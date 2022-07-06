@@ -9,7 +9,7 @@ The goal of this project is to create a game in 3D using raycasting ! The Maze P
 > https://github.com/ozswar94/Maze.git
 
 ### Landing Page :
-> https://github.com/ozswar94/ozswar94.github.io.git
+> https://ozswar94.github.io/Maze_Project/#
 
 ## Project Details
 
