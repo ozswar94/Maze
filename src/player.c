@@ -4,7 +4,9 @@
 #define RAND_MAX 50
 
 /**
+ * weapGenerator - generate weapon
  *
+ * Return: weapon with stats
  */
 
 weapon_t weapGenerator()
