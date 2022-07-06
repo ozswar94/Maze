@@ -34,3 +34,5 @@ void DrawBullets(SDL_Renderer * ren, weapon_t weapon);
 // Fonctions villain
 villain_t MoveEnnemy(villain_t ennemy);
 int attack_player(weapon);
+
+#endif
