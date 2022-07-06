@@ -4,6 +4,12 @@
 
 #define RAND_MAX 15
 
+/**
+ * MoveEnnemy - setup a routine for a villain
+ * @ennemy: ennemy to setup the routine to
+ *
+ * Return: the ennemy and its position
+ */
 villain_t MoveEnnemy(villain_t ennemy)
 {
 	ennemyStep = randint();
@@ -20,8 +26,20 @@ villain_t MoveEnnemy(villain_t ennemy)
 	return ennemy;
 }
 
-int attack_player(weapon)
+/**
+ * attack_player - function for the ennemies attacks
+ *
+ * Return: player health
+ */
+int attack_player()
 {
+	villain_t = enemy;
+	if (/*villain see player*/)
+	{
+		enemy->alertState = True;
+		while (enemy->alertState == True)
+
+	}
 
 }
 

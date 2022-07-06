@@ -8,7 +8,6 @@
  *
  * Return: weapon with stats
  */
-
 weapon_t weapGenerator()
 {
 	weapon_t weapon;
@@ -20,6 +19,11 @@ weapon_t weapGenerator()
 	return weapon;
 }
 
+/**
+ * shoot - attack function
+ * @weapon: weapon used
+ * Return: villain hp
+ */
 int shoot(weapon_t weapon)
 {
 	villain_t villain;
@@ -46,6 +50,11 @@ int shoot(weapon_t weapon)
 
 }
 
+/**
+ * DrawBullets - effect for bullets
+ * @ren: rendering of effect
+ * @weapon: start point of effect
+ */
 void DrawBullets(SDL_Renderer * ren, weapon_t weapon)
 {
 	COLOR_ORANGE(ren);
