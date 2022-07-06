@@ -14,16 +14,16 @@ The goal of this project is to create a game in 3D using raycasting ! The Maze P
 ## Project Details
 
 ### Used Librairies
--> SDL2/SDL.h
--> stdlib.h
--> stdio.h
--> math.h
+- SDL2/SDL.h
+- stdlib.h
+- stdio.h
+- math.h
 
 ### Local librairies
--> utils.h
--> raycaster.h
--> gameplay.h
+- utils.h
+- raycaster.h
+- gameplay.h
 
 ## AUTHORS
 [Jordan Mpounza](https://www.linkedin.com/in/jordan-mpounza/) - ozswar94
-[Orlane Mathoré](www.linkedin.com/in/orlane-mathoré) - NeoV0id
+[Orlane Mathoré](https://www.linkedin.com/in/orlane-mathor%C3%A9/) - NeoV0id
