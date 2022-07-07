@@ -36,6 +36,8 @@ typedef struct s_sdl
 {
   SDL_Window      *window;
   SDL_Renderer    *renderer;
+  SDL_Surface     *image;
+  SDL_Texture     *texture;
 } t_sdl;
 
 

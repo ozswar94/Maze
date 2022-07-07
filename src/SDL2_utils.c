@@ -8,6 +8,8 @@
 */
 int init(t_sdl *sdl, t_raycaster *rc)
 {
+	sdl->surface = NULL;
+	sdl->texture = NULL;
 	sdl->window = NULL;
 	sdl->renderer = NULL;
 	rc->player_pos_x = INIT_P_POS_X;
@@ -25,6 +27,29 @@ int init(t_sdl *sdl, t_raycaster *rc)
 			&sdl->window, &sdl->renderer) != 0)
 	{
 		fprintf(stderr, "Window creation failed (%s)\n", SDL_GetError());
+		return (-1);
+	}
+	return (0);
+}
+
+/**
+ * load_texture - load textures for map
+ * @sdl: struct for sdl
+ * Return: -1 on failure 0 on success
+ */
+int load_texture(t_sdl *sdl)
+{
+	sdl->image = SDL_LoadBMP("src/rock_wall.bmp");
+	sdl->texture = SDL_CreateTexturefromsurface(sdl->renderer, image);
+
+	if (sdl->image == NULL)
+	{
+		fprintf(stderr, "Loading image failed (%s)\n", SDL_GetError());
+		return (-1);
+	}
+	if (sdl->texture == NULL)
+	{
+		fprintf(stderr, "Failed to create texture (%s)\n", SDL_GetError());
 		return (-1);
 	}
 	return (0);
